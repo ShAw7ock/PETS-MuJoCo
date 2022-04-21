@@ -3,7 +3,7 @@ import argparse
 
 def common_args():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--env_name", default="GYMMB_HalfCheetah-v2", type=str,
+    parser.add_argument("--env_name", required=True, type=str,
                         help="environment name: GYMMB_* or Magellan*")
     parser.add_argument("--task_name", default="standard", type=str, help="assert standard")
     parser.add_argument("--seed", default=12, type=int, help="random seed")
